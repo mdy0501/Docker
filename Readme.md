@@ -1,6 +1,6 @@
 # Docker Command
 
-#### * _update: 2019.03.28_
+#### * _update: 2019.04.01_
 
 <br>
 <br>
@@ -63,10 +63,34 @@
 ### ■ 이미지 삭제하기 (rmi)
 #### `> docker rmi 이미지ID`
  - 컨테이너가 실행중인 이미지는 삭제되지 않는다.
+ - 컨테이너는 이미지들의 레이어를 기반으로 실행중이므로 당연히 삭제할 수 없다.
+
+<br>
+
+
+### ■ 컨테이너 로그 확인(logs)
+#### `> docker logs 컨테이너ID`
+ - [-f, --follow = false] : 실시간으로 로그를 출력
+ - [-t, --timestamps = false] : 로그 앞에 시간 값을 표시
+ - [--tail = 숫자] : 최종 로그에서 일정 개수만을 출력
+   -   (ex) docker logs --tail 10 컨테이너ID
 
 
 <br>
 
 
+### ■ 컨테이너 명령어 실행(exec)
+#### `> docker exec 컨테이너ID`
+ - [-d, --detach = false] : 명령을 백그라운드로 실행
+ - [-i, --interactive = false] : 표준 입력(stdin)을 활성화하며 컨테이너와 연결(attach)되어 있지 않더라도 표준 입력을 유지한다.
+ - [-t, --tty = false] : TTY 모드(pseudo-TTY)를 사용한다. Bash를 사용하려면 이 옵션을 설정해야 한다. 이 옵션을 설정하지 않으면 입력할 수는 있지만 셸이 표지되지 않는다.
+ - Bash 셸을 연결할 때는 `-i -t` 옵션을 사용해야 명령을 입력하고 결과를 확인할 수 있다.
 
 
+<br>
+<br>
+<br>
+
+
+### `[참조 링크]`
+ - https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0-rm
