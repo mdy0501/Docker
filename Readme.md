@@ -44,6 +44,22 @@
 <br>
 
 
+
+### ■ 컨테이너 제거하기 (rm)
+#### `> docker rm [OPTIONS] CONTAINER [CONTAINER ...]`
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
 ### ■ 이미지 목록 확인 (images)
 #### `> docker images`
 
